@@ -3,6 +3,8 @@ import Employeejoining from "./Forms/Employeejoining";
 import Header from "./Header";
 import PersonIcon from "@mui/icons-material/Person";
 import PageHeader from "./PageHeader";
+import Foreigntravel from './Forms/Foreigntravel'
+import Leaverequest from './Forms/Leaverequest'
 
 const Homepage = () => {
   return (
@@ -17,9 +19,11 @@ const Homepage = () => {
       </div>
       <div className="container my-5">
         <Employeejoining></Employeejoining>
+
       </div>
     </div>
   );
 };
 
+  
 export default Homepage;
