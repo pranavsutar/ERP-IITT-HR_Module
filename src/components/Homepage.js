@@ -1,29 +1,32 @@
 import React from "react";
-import Employeejoining from "./Forms/Employeejoining";
 import Header from "./Header";
-import PersonIcon from "@mui/icons-material/Person";
-import PageHeader from "./PageHeader";
-import Foreigntravel from './Forms/Foreigntravel'
-import Leaverequest from './Forms/Leaverequest'
-
+import Foreigntravel from "./Forms/Foreigntravel";
+import Leaverequest from "./Forms/Leaverequest";
+import Formpage from "./FormPages/EmployeeJoiningPage";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 const Homepage = () => {
   return (
     <div>
       <Header />
-      <div className="container my-3">
-        <PageHeader
-          title="Page Title"
-          subtitle="Page Description"
-          icon={<PersonIcon />}
-        />
-      </div>
       <div className="container my-5">
-        <Employeejoining></Employeejoining>
+        <Box sx={{ "& button": { m: 1 } }}>
+          <Button className="mx-2" variant="contained" size="medium" href="/forms/employeejoining">
+            Employee Joining
+          </Button>
+          <Button className="mx-2" variant="contained" size="medium" href="/forms/foreigntravel">
+            Foreign Travel Grants
+          </Button>
+          <Button className="mx-2" variant="contained" size="medium" href="/forms/leaverequest">
+            Leave Request
+          </Button>
+        </Box>
 
+
+        
       </div>
     </div>
   );
 };
 
-  
 export default Homepage;
