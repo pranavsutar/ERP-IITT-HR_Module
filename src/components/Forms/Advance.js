@@ -9,7 +9,7 @@ import DateFnsUils from '@date-io/date-fns'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 import Button from '@mui/material/Button'
 
-const Foreigntravel = () => {
+const Advance = () => {
     const {selectedDate,setSelectedDate}=React.useState( new Date ("2020-11-11"))
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
@@ -18,9 +18,10 @@ const Foreigntravel = () => {
     }
    return (
     <Paper sx={{ padding: 2 }}>
-      <div className="container">
+    
+    <div className="container">
         <h2>
-          <b>Foreign Travel Grant</b>
+          <b>Apply for Advance</b>
         </h2>
         <hr></hr>
       </div>
@@ -94,87 +95,48 @@ const Foreigntravel = () => {
        
       />    
 
-
- 
-      <TextField
-        
-        id="fname"
-        label="Event for which travelling"
-        defaultValue=""
-        {...register("lname", 
-        {
-            minLength:3,
-            maxLength: 200,
-        })}
-       
-      />
-
-      <Grid container justify='space-around'>
-          <DatePicker
-          label="Date of departure"
-          value={selectedDate}
-          onChange={handleDateChange}
-          renderInput={(props) => (
-            <TextField {...props} />
-          )} />
-      </Grid>
-
-      <Grid container justify='space-around'>
-          <DatePicker
-          label="Date of Arrival"
-          value={selectedDate}
-          onChange={handleDateChange}
-          renderInput={(props) => (
-            <TextField {...props} />
-          )} />
-      </Grid>
-
-
-      <TextField
-        required
-        id="fname"
-        label="Country to which travelling"
-        defaultValue=""
-        {...register("fname", 
-        {
-            required:true,
-            pattern:{
+    <TextField
+            required
+            id="loan"
+            label="Amount in Rupee"
+            defaultValue=""
+            {...register("mname", 
+            {
+            
                 minLength:3,
                 maxLength: 100,
-            }
-            
-        })}
-       
-      />
+            })}
+        
+        />    
+
+
+
 
       {/* {errors.fname && <p style={{color:"red"}}> </p>} */}
-      <TextField
-        required
-        id="fname"
-        label="City"
-        defaultValue=""
-        {...register("mname", 
-        {
-         
-            minLength:3,
-            maxLength: 100,
-        })}
-       
-      />
+     
 
 
 
     </div>
-    <br />
-    <Button variant="outlined" type='upload' color='success'>Please upload proof of invitation/confirmation of travel documents here</Button>
     
+    <div className="container">
+          <Button type="upload" variant="outlined">
+            {" "}
+            Upload Required Document
+          </Button>
+    </div>
 
   </Box>
-        <br/>
-  <Button variant="outlined" type = "submit" color="primary"> Request for NOC</Button>
+  <br />
+    <div className="container">
+          <Button type="submit" variant="contained">
+            {" "}
+            Apply
+          </Button>
+    </div>
   </form>
   </Paper>
    )
  }
  
- export default Foreigntravel
+ export default Advance

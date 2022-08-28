@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { useForm } from "react-hook-form";
 import 'date-fns'
+import Button from '@mui/material/Button'
+import Paper from "@mui/material/Paper";
 import Grid from '@mui/material/Grid'
 import DateFnsUils from '@date-io/date-fns'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
@@ -14,6 +16,13 @@ const Leaverequest = () => {
         setSelectedDate(date);
     }
    return (
+    <Paper sx={{ padding: 2 }}>
+      <div className="container">
+        <h2>
+          <b>Leave Request</b>
+        </h2>
+        <hr></hr>
+      </div>
     <form onSubmit={handleSubmit(onSubmit)}>
     <Box
     component="form"
@@ -139,8 +148,10 @@ const Leaverequest = () => {
     </div>
   </Box>
 
-  <button type = "submit"> Submit Leave Request</button>
+  <br />
+  <Button variant='outlined' type = "submit"> Submit Leave Request</Button>
   </form>
+  </Paper>
    )
  }
  
