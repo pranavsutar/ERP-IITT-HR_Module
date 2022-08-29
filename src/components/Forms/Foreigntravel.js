@@ -12,7 +12,30 @@ import Button from '@mui/material/Button'
 const Foreigntravel = () => {
     const {selectedDate,setSelectedDate}=React.useState( new Date ("2020-11-11"))
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+
+    const submitsignin = async (data) => {
+      const response = await fetch("http://localhost:8000/api/foreigntravel", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+  
+      const resp = await response.json();
+      if (resp.success === "true") {
+        alert(resp.msg)
+      } else {
+        alert(resp.msg);
+      }
+    };
+
+
+
+    const onSubmit = (data) => {
+      console.log(data);
+      submitsignin(data)
+    }
     const handleDateChange=(date)=>{
         setSelectedDate(date);
     }
@@ -54,10 +77,10 @@ const Foreigntravel = () => {
       {/* {errors.fname && <p style={{color:"red"}}> </p>} */}
       <TextField
         required
-        id="fname"
+        id="payroll"
         label="Payroll Number"
         defaultValue=""
-        {...register("mname", 
+        {...register("payroll", 
         {
          
             minLength:3,
@@ -68,10 +91,10 @@ const Foreigntravel = () => {
 
     <TextField
         required
-        id="fname"
+        id="Department"
         label="Department"
         defaultValue=""
-        {...register("mname", 
+        {...register("Department", 
         {
          
             minLength:3,
@@ -82,10 +105,10 @@ const Foreigntravel = () => {
 
     <TextField
         required
-        id="fname"
+        id="Designation"
         label="Designation"
         defaultValue=""
-        {...register("mname", 
+        {...register("Designnation", 
         {
          
             minLength:3,
@@ -98,10 +121,10 @@ const Foreigntravel = () => {
  
       <TextField
         
-        id="fname"
+        id="event"
         label="Event for which travelling"
         defaultValue=""
-        {...register("lname", 
+        {...register("event", 
         {
             minLength:3,
             maxLength: 200,
@@ -115,7 +138,11 @@ const Foreigntravel = () => {
           value={selectedDate}
           onChange={handleDateChange}
           renderInput={(props) => (
-            <TextField {...props} />
+            <TextField {...props} 
+            {...register("Deptarture")
+            }
+
+            />
           )} />
       </Grid>
 
@@ -125,23 +152,21 @@ const Foreigntravel = () => {
           value={selectedDate}
           onChange={handleDateChange}
           renderInput={(props) => (
-            <TextField {...props} />
+            <TextField {...props} {...register("Arrival")
+          }/>
           )} />
       </Grid>
 
 
       <TextField
         required
-        id="fname"
+        id="country"
         label="Country to which travelling"
         defaultValue=""
-        {...register("fname", 
+        {...register("country", 
         {
             required:true,
-            pattern:{
-                minLength:3,
-                maxLength: 100,
-            }
+            
             
         })}
        
@@ -150,10 +175,10 @@ const Foreigntravel = () => {
       {/* {errors.fname && <p style={{color:"red"}}> </p>} */}
       <TextField
         required
-        id="fname"
+        id="city"
         label="City"
         defaultValue=""
-        {...register("mname", 
+        {...register("city", 
         {
          
             minLength:3,
