@@ -54,7 +54,7 @@ const Rejoining = () => {
       {/* {errors.fname && <p style={{color:"red"}}> </p>} */}
       <TextField
         required
-        id="fname"
+        id="payroll"
         label="Payroll Number"
         defaultValue=""
         {...register("mname", 
@@ -68,7 +68,7 @@ const Rejoining = () => {
 
     <TextField
         required
-        id="fname"
+        id="department"
         label="Department"
         defaultValue=""
         {...register("mname", 
@@ -82,7 +82,7 @@ const Rejoining = () => {
 
     <TextField
         required
-        id="fname"
+        id="designation"
         label="Designation"
         defaultValue=""
         {...register("mname", 

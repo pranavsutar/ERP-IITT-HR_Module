@@ -53,7 +53,7 @@ const Leaverequest = () => {
       {/* {errors.fname && <p style={{color:"red"}}> </p>} */}
       <TextField
         required
-        id="fname"
+        id="payroll"
         label="Payroll Number"
         defaultValue=""
         {...register("mname", 
@@ -67,7 +67,7 @@ const Leaverequest = () => {
 
     <TextField
         required
-        id="fname"
+        id="department"
         label="Department"
         defaultValue=""
         {...register("mname", 
@@ -81,7 +81,7 @@ const Leaverequest = () => {
 
     <TextField
         required
-        id="fname"
+        id="designation"
         label="Designation"
         defaultValue=""
         {...register("mname", 
@@ -97,7 +97,7 @@ const Leaverequest = () => {
  
       <TextField
         
-        id="fname"
+        id="typeofleave"
         label="Type of Leave"
         defaultValue=""
         {...register("lname", 
@@ -130,7 +130,7 @@ const Leaverequest = () => {
 
 
       <TextField
-        id="fname"
+        id="reason"
         label="Reason for leave"
         defaultValue=""
         {...register("fname", 
