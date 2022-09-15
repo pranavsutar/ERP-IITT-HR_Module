@@ -13,7 +13,8 @@ export default function Educationdetails(props) {
     watch,
     formState: {},
   } = useForm();
-  const onSubmit = (data) => {
+  const onSubmit2 = (data) => {
+    console.log("here in submit 2")
     props.seteducation(current=> [...current, data]);
     
   }
@@ -30,7 +31,7 @@ export default function Educationdetails(props) {
         <h3>Add Details</h3>
         <hr></hr>
       </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit2)}>
         <Box
           component="form"
           sx={{
