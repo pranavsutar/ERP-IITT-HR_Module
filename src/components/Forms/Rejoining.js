@@ -3,12 +3,13 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { useForm } from "react-hook-form";
 import 'date-fns'
-import Button from '@mui/material/Button'
 import Paper from "@mui/material/Paper";
 import Grid from '@mui/material/Grid'
 import DateFnsUils from '@date-io/date-fns'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
-const Leaverequest = () => {
+import Button from '@mui/material/Button'
+
+const Rejoining = () => {
     const {selectedDate,setSelectedDate}=React.useState( new Date ("2020-11-11"))
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
@@ -17,9 +18,9 @@ const Leaverequest = () => {
     }
    return (
     <Paper sx={{ padding: 2 }}>
-      <div className="container">
+    <div className="container">
         <h2>
-          <b>Leave Request</b>
+          <b>Rejoining</b>
         </h2>
         <hr></hr>
       </div>
@@ -93,34 +94,9 @@ const Leaverequest = () => {
        
       />    
 
-
- 
-      <TextField
-        
-        id="fname"
-        label="Type of Leave"
-        defaultValue=""
-        {...register("lname", 
-        {
-            minLength:3,
-            maxLength: 200,
-        })}
-       
-      />
-
       <Grid container justify='space-around'>
           <DatePicker
-          label="Date of Leave Starting"
-          value={selectedDate}
-          onChange={handleDateChange}
-          renderInput={(props) => (
-            <TextField {...props} />
-          )} />
-      </Grid>
-
-      <Grid container justify='space-around'>
-          <DatePicker
-          label="Date of Leave ending"
+          label="Date of Rejoining"
           value={selectedDate}
           onChange={handleDateChange}
           renderInput={(props) => (
@@ -129,30 +105,31 @@ const Leaverequest = () => {
       </Grid>
 
 
-      <TextField
-        id="fname"
-        label="Reason for leave"
-        defaultValue=""
-        {...register("fname", 
-        {
-            required:true,
-            pattern:{
-                minLength:3,
-                maxLength: 100,
-            }
-            
-        })}
-       
-      />
+      {/* {errors.fname && <p style={{color:"red"}}> </p>} */}
+     
+
+
 
     </div>
-  </Box>
+    
+    <div className="container">
+          <Button type="upload" variant="outlined">
+            {" "}
+            Please upload proof of Leave approval here
+          </Button>
+    </div>
 
+  </Box>
   <br />
-  <Button variant='outlined' type = "submit"> Submit Leave Request</Button>
+    <div className="container">
+          <Button type="submit" variant="contained">
+            {" "}
+            Apply
+          </Button>
+    </div>
   </form>
   </Paper>
    )
  }
  
- export default Leaverequest
+ export default Rejoining

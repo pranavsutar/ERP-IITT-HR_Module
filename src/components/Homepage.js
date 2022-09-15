@@ -1,10 +1,17 @@
 import React from "react";
 import Header from "./Header";
 import Foreigntravel from "./Forms/Foreigntravel";
-import Leaverequest from "./Forms/Leaverequest";
+
+import NocPage from "./FormPages/NocPage";
 import Formpage from "./FormPages/EmployeeJoiningPage";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import ELEncashmentPage from "./FormPages/ELEncashmentPage";
+import RejoiningPage from "./FormPages/RejoiningPage";
+import LoanPage from "./FormPages/LoanPage";
+import AdvancePage from "./FormPages/AdvancePage"
+import InsuranePage from "./FormPages/InsurancePage";
+
 const Homepage = () => {
   return (
     <div>
@@ -20,9 +27,15 @@ const Homepage = () => {
           <Button className="mx-2" variant="contained" size="medium" href="/forms/leaverequest">
             Leave Request
           </Button>
+
         </Box>
-
-
+      {/* <NocPage /> */}
+      {/* <ELEncashmentPage/> */}
+      {/* <RejoiningPage/> */}
+      {/* <LoanPage /> */}
+      {/* <AdvancePage /> */}
+      {/* <InsuranePage/> */}
+      {/* <VacationPage /> */}
         
       </div>
     </div>

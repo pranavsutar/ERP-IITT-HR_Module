@@ -3,12 +3,13 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { useForm } from "react-hook-form";
 import 'date-fns'
-import Button from '@mui/material/Button'
 import Paper from "@mui/material/Paper";
 import Grid from '@mui/material/Grid'
 import DateFnsUils from '@date-io/date-fns'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
-const Leaverequest = () => {
+import Button from '@mui/material/Button'
+
+const Foreigntravel = () => {
     const {selectedDate,setSelectedDate}=React.useState( new Date ("2020-11-11"))
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
@@ -19,7 +20,7 @@ const Leaverequest = () => {
     <Paper sx={{ padding: 2 }}>
       <div className="container">
         <h2>
-          <b>Leave Request</b>
+          <b>Foreign Travel Grant</b>
         </h2>
         <hr></hr>
       </div>
@@ -98,7 +99,7 @@ const Leaverequest = () => {
       <TextField
         
         id="fname"
-        label="Type of Leave"
+        label="Event for which travelling"
         defaultValue=""
         {...register("lname", 
         {
@@ -110,7 +111,7 @@ const Leaverequest = () => {
 
       <Grid container justify='space-around'>
           <DatePicker
-          label="Date of Leave Starting"
+          label="Date of departure"
           value={selectedDate}
           onChange={handleDateChange}
           renderInput={(props) => (
@@ -120,7 +121,7 @@ const Leaverequest = () => {
 
       <Grid container justify='space-around'>
           <DatePicker
-          label="Date of Leave ending"
+          label="Date of Arrival"
           value={selectedDate}
           onChange={handleDateChange}
           renderInput={(props) => (
@@ -130,8 +131,9 @@ const Leaverequest = () => {
 
 
       <TextField
+        required
         id="fname"
-        label="Reason for leave"
+        label="Country to which travelling"
         defaultValue=""
         {...register("fname", 
         {
@@ -145,14 +147,34 @@ const Leaverequest = () => {
        
       />
 
-    </div>
-  </Box>
+      {/* {errors.fname && <p style={{color:"red"}}> </p>} */}
+      <TextField
+        required
+        id="fname"
+        label="City"
+        defaultValue=""
+        {...register("mname", 
+        {
+         
+            minLength:3,
+            maxLength: 100,
+        })}
+       
+      />
 
-  <br />
-  <Button variant='outlined' type = "submit"> Submit Leave Request</Button>
+
+
+    </div>
+    <br />
+    <Button variant="outlined" type='upload' color='success'>Please upload proof of invitation/confirmation of travel documents here</Button>
+    
+
+  </Box>
+        <br/>
+  <Button variant="outlined" type = "submit" color="primary"> Request for NOC</Button>
   </form>
   </Paper>
    )
  }
  
- export default Leaverequest
+ export default Foreigntravel
