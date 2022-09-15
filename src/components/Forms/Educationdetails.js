@@ -6,17 +6,26 @@ import { useForm } from "react-hook-form";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 
-export default function Educationdetails() {
+export default function Educationdetails(props) {
   const {
     register,
     handleSubmit,
     watch,
     formState: {},
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    props.seteducation(current=> [...current, data]);
+    
+  }
   const handleClick = () => {};
   return (
-    <Paper sx={{ padding: 2 }}>
+    <Paper sx={{ padding: 2 }} 
+    style={{
+      maxWidth:"90vw",
+      maxHeight: "90vh",
+      overflow:"scroll"
+    }}
+    >
       <div className="container">
         <h3>Add Details</h3>
         <hr></hr>
@@ -35,14 +44,14 @@ export default function Educationdetails() {
             <hr></hr>
             <TextField
               required
-              id="fname"
-              label="Detail1"
+              id="institute"
+              label="Institute"
               defaultValue=""
-              {...register("fname", {
+              {...register("institute", {
                 required: true,
                 pattern: {
                   minLength: 3,
-                  maxLength: 50,
+                  maxLength: 150,
                 },
               })}
             />
@@ -56,14 +65,38 @@ export default function Educationdetails() {
             >
               <TextField
                 required
-                id="email"
-                label="Detail2"
+                id="degree"
+                label="Degree/Certification"
                 defaultValue=""
-                {...register("email", {
+                {...register("degree", {
                   required: true,
                   pattern: {
                     minLength: 3,
-                    maxLength: 50,
+                    maxLength: 150,
+                  },
+                })}
+              />
+            </Box>
+
+
+            <Box
+              component="form"
+              sx={{
+                "& .MuiTextField-root": { m: 1, width: "50ch" },
+              }}
+              noValidate
+              autoComplete="off"
+            >
+              <TextField
+                required
+                id="result"
+                label="Results/Achievements"
+                defaultValue=""
+                {...register("result", {
+                  required: true,
+                  pattern: {
+                    minLength: 3,
+                    maxLength: 550,
                   },
                 })}
               />
