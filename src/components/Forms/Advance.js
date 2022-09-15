@@ -55,7 +55,7 @@ const Advance = () => {
       {/* {errors.fname && <p style={{color:"red"}}> </p>} */}
       <TextField
         required
-        id="fname"
+        id="payroll"
         label="Payroll Number"
         defaultValue=""
         {...register("mname", 
@@ -69,7 +69,7 @@ const Advance = () => {
 
     <TextField
         required
-        id="fname"
+        id="department"
         label="Department"
         defaultValue=""
         {...register("mname", 
@@ -83,7 +83,7 @@ const Advance = () => {
 
     <TextField
         required
-        id="fname"
+        id="designation"
         label="Designation"
         defaultValue=""
         {...register("mname", 
