@@ -27,26 +27,26 @@ Steps to run the project:
     ### `npm install` 
 2. Now run 
     ### `npm start` 
-Backend will run on  `localhost 8000`
+    Backend will run on  `localhost 8000`
 
 3. Open frontend in another terminal
 4. Run it using 
-### `npm install`
-### `npm start`
-Frontend will run on [localhost 3000](http://localhost:3000)
+    ### `npm install`
+    ### `npm start`
+    Frontend will run on [localhost 3000](http://localhost:3000)
 
-### `npm test`
+    ### `npm test`
 
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
+    Launches the test runner in the interactive watch mode.
+    See the section about running tests for more information.
 
-### `npm run build`
+    ### `npm run build`
 
-Builds the app for production to the build folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Builds the app for production to the build folder.
+    It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+    The build is minified and the filenames include the hashes.
+    Your app is ready to be deployed!
 ## Screenshots
 ### Main Page
 ![sess](https://user-images.githubusercontent.com/97940574/190463692-2ad01a4f-26d7-4c52-b0bd-4aba800f63c2.png)
