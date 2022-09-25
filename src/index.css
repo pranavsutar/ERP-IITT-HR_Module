@@ -1,3 +1,4 @@
+
 *{
   box-sizing:border-box;
 } 
@@ -10,9 +11,21 @@ body{
 
 /* for all the forms with black background */
 .textfield_label{
-  color:gray !important;
+  color:rgb(153, 149, 149) !important;
 }
 
+/* to change the colors of the datepickers*/
+
+/* Standard color of all error message*/
 .errormsg{
   color:rgb(153, 35, 35)
 }
+
+
+body::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+

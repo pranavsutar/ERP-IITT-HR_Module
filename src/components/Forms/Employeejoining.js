@@ -334,6 +334,7 @@ const Employeejoining = () => {
               InputProps={{
                 className: "textfield_label",
               }}
+              required
               id="state"
               label="State"
               defaultValue=""
@@ -415,10 +416,10 @@ const Employeejoining = () => {
             </Dialog>
           </div>
         </Box>
-        <div className="container">
-          <Button type="submit" variant="outlined">
+        <div className="container my-5" style={{display:"flex", justifyContent:"right", marginRight:"5px="}}>
+          <Button type="submit" class="btn btn-success">
             {" "}
-            submit
+            Submit
           </Button>
         </div>
       </form>

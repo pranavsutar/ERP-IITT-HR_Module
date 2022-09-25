@@ -11,11 +11,13 @@ export default function Educationdetails(props) {
     register,
     handleSubmit,
     watch,
+    reset,
     formState: {},
   } = useForm();
   const onSubmit2 = (data) => {
     console.log("here in submit 2")
     props.seteducation(current=> [...current, data]);
+    // reset();
     
   }
   const handleClick = () => {};

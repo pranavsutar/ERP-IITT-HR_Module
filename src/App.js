@@ -5,8 +5,9 @@ import Homepage from './components/Homepage'
 import { LocalizationProvider } from '@mui/x-date-pickers'
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import EmployeeJoiningPage from './components/FormPages/EmployeeJoiningPage'
-import ForeignTravelGrants from './components/FormPages/ForeignTravelGrants'
+import InternationalTravelPage from "./components/FormPages/InternationalTravelPage"
 import LeaveRequestPage from './components/FormPages/LeaveRequestPage'
+
 
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
     <Routes>
       <Route exact path = "/" element={<Homepage/>} ></Route>
       <Route exact path = "/forms/employeejoining" element={<EmployeeJoiningPage/>} ></Route>
-      <Route exact path = "/forms/foreigntravel" element={<ForeignTravelGrants/>} ></Route>
+      <Route exact path = "/forms/internationaltravel" element={<InternationalTravelPage/>} ></Route>
       <Route exact path = "/forms/leaverequest" element={<LeaveRequestPage/>} ></Route>
     </Routes>
   </Router>

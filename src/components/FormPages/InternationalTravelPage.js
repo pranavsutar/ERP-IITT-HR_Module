@@ -1,9 +1,11 @@
 import React from "react";
-import Employeejoining from "../Forms/Employeejoining";
 import PageHeader from "../PageHeader";
 import PersonIcon from "@mui/icons-material/Person";
+import InternationalTravel from "../Forms/InternationalTravel";
+import { LocalizationProvider } from '@mui/x-date-pickers'
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import Header from "../Header";
-const EmployeeJoiningPage = () => {
+const InternationalTravelPage = () => {
   return (
     <div
       style={{
@@ -16,8 +18,8 @@ const EmployeeJoiningPage = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <Header />
-      <div
+        <Header/>
+        <div
         className="container"
         style={{
           minHeight: "100vh",
@@ -29,21 +31,21 @@ const EmployeeJoiningPage = () => {
             display:"flex", alignItems:"center", justifyContent:"center", flexDirection:"column", minheight:"100vh"
         }}
       >
-        <div className="container" style={{}}>
-          <div className="container">
-            <PageHeader
-              title="Page Title"
-              subtitle="Page Description"
-              icon={<PersonIcon />}
-            />
-          </div>
-          <div className="container">
-            <Employeejoining />
-          </div>
+        <div className="container my-3">
+          <PageHeader
+            title="Page Title"
+            subtitle="Page Description"
+            icon={<PersonIcon />}
+          />
+        </div>
+        <div className="container my-5">
+        <LocalizationProvider dateAdapter={AdapterDateFns}>
+            <InternationalTravel/>
+            </LocalizationProvider>
         </div>
       </div>
     </div>
   );
 };
 
-export default EmployeeJoiningPage;
+export default InternationalTravelPage;

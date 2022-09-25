@@ -75,7 +75,7 @@ export default function CustomDialog({ children }) {
         <DialogContent dividers>{children}</DialogContent>
         <DialogActions>
           <Button autoFocus onClick={handleClose}>
-            Save changes
+            Exit
           </Button>
         </DialogActions>
       </BootstrapDialog>

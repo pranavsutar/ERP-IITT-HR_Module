@@ -65,67 +65,67 @@ const Homepage = () => {
 
 
           <div className="buttonclass my-2">
-               <Link to="/forms/leaverequest" style={{textDecoration:"none", color:"gray"}}>
+               <Link to="/" style={{textDecoration:"none", color:"gray"}}>
                   <FcLeave/> Leave Record
                </Link>
           </div>
 
           <div className="buttonclass my-2">
-               <Link to="/forms/employeejoining" style={{textDecoration:"none", color:"gray"}}>
+               <Link to="/" style={{textDecoration:"none", color:"gray"}}>
                   <MdFlightTakeoff/> Rejoining after Vacation
                </Link>
           </div>
 
           <div className="buttonclass my-2">
-               <Link to="/forms/employeejoining" style={{textDecoration:"none", color:"gray"}}>
+               <Link to="/forms/leaverequest" style={{textDecoration:"none", color:"gray"}}>
                   <MdCardTravel/> Apply for Leave Travel concession
                </Link>
           </div>
 
           <div className="buttonclass my-2">
-               <Link to="/forms/employeejoining" style={{textDecoration:"none", color:"gray"}}>
+               <Link to="/" style={{textDecoration:"none", color:"gray"}}>
                   <FcManager/> Promotion/Transfer Details
                </Link>
           </div>
 
           <div className="buttonclass my-2">
-               <Link to="/forms/employeejoining" style={{textDecoration:"none", color:"gray"}}>
+               <Link to="/" style={{textDecoration:"none", color:"gray"}}>
                  <MdAttachMoney/> Annual Increment
                </Link>
           </div>
 
           <div className="buttonclass my-2">
-               <Link to="/forms/employeejoining" style={{textDecoration:"none", color:"gray"}}>
+               <Link to="/" style={{textDecoration:"none", color:"gray"}}>
                  <MdUpgrade/> Financial Upgrade
                </Link>
           </div>
 
           <div className="buttonclass my-2">
-               <Link to="/forms/employeejoining" style={{textDecoration:"none", color:"gray"}}>
+               <Link to="/" style={{textDecoration:"none", color:"gray"}}>
                  <TbBeach/> Summer/Winter Vacation
                </Link>
           </div>
 
           <div className="buttonclass my-2">
-               <Link to="/forms/foreigntravel" style={{textDecoration:"none", color:"gray"}}>
+               <Link to="/forms/internationaltravel" style={{textDecoration:"none", color:"gray"}}>
                   <FaFlagUsa/> National/ International Travel
                </Link>
           </div>
 
           <div className="buttonclass my-2">
-               <Link to="/forms/employeejoining" style={{textDecoration:"none", color:"gray"}}>
+               <Link to="/" style={{textDecoration:"none", color:"gray"}}>
                   <FaPassport/> NOC for VISA/ passport
                </Link>
           </div>
 
           <div className="buttonclass my-2">
-               <Link to="/forms/employeejoining" style={{textDecoration:"none", color:"gray"}}>
+               <Link to="/" style={{textDecoration:"none", color:"gray"}}>
                   <FaRupeeSign/> EL Encashments
                </Link>
           </div>
 
           <div className="buttonclass my-2">
-               <Link to="/forms/employeejoining" style={{textDecoration:"none", color:"gray"}}>
+               <Link to="/" style={{textDecoration:"none", color:"gray"}}>
                   <FaPiggyBank/> Loans and Advances
                </Link>
           </div>
