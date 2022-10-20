@@ -7,10 +7,13 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns'
 import EmployeeJoiningPage from './components/FormPages/EmployeeJoiningPage'
 import InternationalTravelPage from "./components/FormPages/InternationalTravelPage"
 import LeaveRequestPage from './components/FormPages/LeaveRequestPage'
+import Admin from './components/Forms/Admin'
+import AdminPage from './components/FormPages/AdminPage'
 
 
 
 const App = () => {
+  
   return (
     <Router>
     <Routes>
@@ -18,6 +21,8 @@ const App = () => {
       <Route exact path = "/forms/employeejoining" element={<EmployeeJoiningPage/>} ></Route>
       <Route exact path = "/forms/internationaltravel" element={<InternationalTravelPage/>} ></Route>
       <Route exact path = "/forms/leaverequest" element={<LeaveRequestPage/>} ></Route>
+      <Route exact path = "/forms/admin" element={<AdminPage/>} ></Route>
+      <Route exact path = "/header" element={<Admin/>} ></Route>
     </Routes>
   </Router>
 

@@ -1,11 +1,12 @@
 import React from "react";
+import "./Header.css";
 
 const Header = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg" style={{backgroundImage:"linear-gradient(to right,rgb(0,0,0,0.90), rgb(0,0,0,0.75)"}}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
+          <a className="navbar-brand " href="/">
             ERP
           </a>
           <button
@@ -19,16 +20,25 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+          
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">
                   Home
                 </a>
-              </li>
-              
-            </ul>
-            
+              </li>              
+            </ul>            
+          </div>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                {/* Admin Page */}
+                <a className="nav-link active" aria-current="page" href="/Forms/Admin">
+                  Admin
+                </a>
+              </li>              
+            </ul>            
           </div>
         </div>
       </nav>

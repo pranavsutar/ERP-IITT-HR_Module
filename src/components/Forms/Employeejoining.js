@@ -334,7 +334,6 @@ const Employeejoining = () => {
               InputProps={{
                 className: "textfield_label",
               }}
-              required
               id="state"
               label="State"
               defaultValue=""

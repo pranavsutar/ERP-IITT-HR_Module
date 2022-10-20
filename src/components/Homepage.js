@@ -120,7 +120,7 @@ const Homepage = () => {
 
           <div className="buttonclass my-2">
                <Link to="/" style={{textDecoration:"none", color:"gray"}}>
-                  <FaRupeeSign/> EL Encashments
+                  <FaRupeeSign/> EL Encashments 
                </Link>
           </div>
 
