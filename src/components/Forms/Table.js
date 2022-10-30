@@ -11,7 +11,7 @@ import './Table.css'
 function List() {
     const rows = [
         {
-          id: 1143155,
+          id: 155,
           product: "Employee Joining",
           img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
           customer: "Isaac Newton",
@@ -19,7 +19,7 @@ function List() {
           status: "Approved",
         },
         {
-            id: 1143156,
+            id: 156,
             product: "International Travel",
             img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
             customer: "Albert Einstein",
@@ -28,7 +28,7 @@ function List() {
 
         },
         {
-            id: 1143157,
+            id: 157,
             product: "Leave Request",
             img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
             customer: "Stephen Hawking",
@@ -36,7 +36,7 @@ function List() {
             status: "Approved",
         },
         {
-            id: 1143158,
+            id: 158,
             product: "Rejoin Request",
             img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
             customer: "Michael Faraday",
@@ -50,8 +50,8 @@ function List() {
         <TableHead>
           <TableRow>
             <TableCell className="tableCell">Tracking ID</TableCell>
-            <TableCell className="tableCell">Product</TableCell>
-            <TableCell className="tableCell">Customer</TableCell>
+            <TableCell className="tableCell">Application Type</TableCell>
+            <TableCell className="tableCell">Applicant Name</TableCell>
             <TableCell className="tableCell">Date</TableCell>
             {/* <TableCell className="tableCell">Amount</TableCell>
             <TableCell className="tableCell">Payment Method</TableCell> */}

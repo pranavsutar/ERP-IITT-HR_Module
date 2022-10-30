@@ -4,9 +4,8 @@ import { useForm } from "react-hook-form";
 import Paper from "@mui/material/Paper";
 import Button from "@mui/material/Button";
 import "animate.css";
-import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
 import List  from "./Table";
+// import ListAdmin  from "./assets/ListAdmin";
 
 const Admin = () => {
   const [education, seteducation] = useState([]);
@@ -77,17 +76,14 @@ const Admin = () => {
           autoComplete="off"
         >
           <div className="container">
-            <div>Applications Receieved</div>
+            <div>Applications Received</div>
             <List />
           </div>
 
-          
- 
         </Box>
         <div className="container my-5" style={{display:"flex", justifyContent:"right", marginRight:"5px="}}>
-          <Button type="submit" class="btn btn-success">
-            {" "}
-            Back
+          <Button type="submit" class="btn btn-success" id='Goto' >
+            Edit
           </Button>
         </div>
       </form>

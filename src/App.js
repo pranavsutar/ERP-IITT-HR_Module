@@ -8,7 +8,9 @@ import EmployeeJoiningPage from './components/FormPages/EmployeeJoiningPage'
 import InternationalTravelPage from "./components/FormPages/InternationalTravelPage"
 import LeaveRequestPage from './components/FormPages/LeaveRequestPage'
 import Admin from './components/Forms/Admin'
+import Admin2 from './components/Forms/Admin2'
 import AdminPage from './components/FormPages/AdminPage'
+import Admin2Page from './components/FormPages/Admin2Page'
 
 
 
@@ -21,7 +23,7 @@ const App = () => {
       <Route exact path = "/forms/employeejoining" element={<EmployeeJoiningPage/>} ></Route>
       <Route exact path = "/forms/internationaltravel" element={<InternationalTravelPage/>} ></Route>
       <Route exact path = "/forms/leaverequest" element={<LeaveRequestPage/>} ></Route>
-      <Route exact path = "/forms/admin" element={<AdminPage/>} ></Route>
+      <Route exact path = "/forms/admin" element={<Admin2Page/>} ></Route>
       <Route exact path = "/header" element={<Admin/>} ></Route>
     </Routes>
   </Router>

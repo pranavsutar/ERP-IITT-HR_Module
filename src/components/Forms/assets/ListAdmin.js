@@ -1,77 +1,57 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
-import InboxIcon from '@mui/icons-material/Inbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
+import React from 'react'
+import { DataGrid } from "@mui/x-data-grid";
+import { userColumns, userRows } from "../../../datatablesource";
+import { Link } from "react-router-dom";
+import { useState } from "react";
+import './ListAdmin.css'
 
-export default function ListAdmin(props) {
-    /*    let Applications = [
-        {
-            type: "Employee Joining",
-            link: "/forms/employeejoining",
-            Name: "Isaac Newton",
-            Date: "08/10/2022",
-            Status: "Pending",
-        },
-        {
-            type: "International Travel",
-            link: "/forms/internationaltravel",
-            Name: "Albert Einstein",
-            Date: "05/10/2022",
-            Status: "Pending",
-        },
-        {
-            type: "Leave Request",
-            link: "/forms/leaverequest",
-            Name: "Stephen Hawking",
-            Date: "10/10/2022",
-            Status: "Pending",
-        },
-    ];
-    */ 
+const Datatable = () => {
+  const [data, setData] = useState(userRows);
 
+  const handleDelete = (id) => {
+    setData(data.filter((item) => item.id !== id));
+  };
+
+  const actionColumn = [
+    {
+      field: "action",
+      headerName: "Action",
+      width: 200,
+      renderCell: (params) => {
+        return (
+          <div className="cellAction">
+            <Link to="/users/test" style={{ textDecoration: "none" }}>
+              <div className="viewButton">View</div>
+            </Link>
+            <div
+              className="deleteButton"
+              onClick={() => handleDelete(params.row.id)}
+            >
+              Delete
+            </div>
+          </div>
+        );
+      },
+    },
+  ];
   return (
-    <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
-      <nav aria-label="main mailbox folders">
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <InboxIcon />
-              </ListItemIcon>
-              <ListItemText primary="Inbox" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <DraftsIcon />
-              </ListItemIcon>
-              <ListItemText primary="Drafts" />
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </nav>
-      <Divider />
-      <nav aria-label="secondary mailbox folders">
-        <List>
-          <ListItem disablePadding>
-            <ListItemButton>
-              <ListItemText primary="Trash" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
-            <ListItemButton component="a" href="#simple-list">
-              <ListItemText primary="Spam" />
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </nav>
-    </Box>
+    <div className="datatable">
+      <div className="datatableTitle">
+       &nbsp;
+        <Link to="/users/new" className="link">
+          Add New
+        </Link>
+      </div>
+      <DataGrid
+        className="datagrid"
+        rows={data}
+        columns={userColumns.concat(actionColumn)}
+        pageSize={9}
+        rowsPerPageOptions={[9]}
+        checkboxSelection
+      />
+    </div>
   );
-}
+};
+
+export default Datatable;
