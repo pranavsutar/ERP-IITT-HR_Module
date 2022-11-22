@@ -58,9 +58,22 @@ Steps to run the project:
 ![mongodb](https://user-images.githubusercontent.com/97940574/190467954-7d0fa9aa-bfe1-41df-8200-033658248d5f.jpeg)
 
 ### Admin Page
-![WhatsApp Image 2022-11-22 at 10 03 53 AM](https://user-images.githubusercontent.com/97940574/203222391-b1321f15-8ae7-4e5c-b88b-54725492fd0e.jpeg)
 
+- Requests for approval in the Admin Page
 
+![ss_1](https://user-images.githubusercontent.com/97940574/203236313-5f2c0cb0-cc93-4924-bd3f-e00ee7ba74b4.jpeg)
+
+- Ability to sort the request according to status and type
+
+![ss_2](https://user-images.githubusercontent.com/97940574/203236398-849d45b8-2115-4142-a285-b589ffd03f41.jpeg)
+
+- Ability to delete an entry
+
+![ss_3](https://user-images.githubusercontent.com/97940574/203236491-4e2e3044-6ea0-4383-994c-117f9594908a.jpeg)
+
+First entry has been deleted. 
+
+![ss_4](https://user-images.githubusercontent.com/97940574/203236501-6d7dc3d4-f012-4469-b001-90de57d2177d.jpeg)
 
 
 ## Authors
