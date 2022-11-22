@@ -57,6 +57,11 @@ Steps to run the project:
 ### Data is uploaded to the database in the following manner
 ![mongodb](https://user-images.githubusercontent.com/97940574/190467954-7d0fa9aa-bfe1-41df-8200-033658248d5f.jpeg)
 
+### Admin Page
+![WhatsApp Image 2022-11-22 at 10 03 53 AM](https://user-images.githubusercontent.com/97940574/203222391-b1321f15-8ae7-4e5c-b88b-54725492fd0e.jpeg)
+
+
+
 
 ## Authors
 
